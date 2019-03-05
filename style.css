@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    background: #008080;
+    font-family: fantasy;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+}
+.nav-link{
+    color: #FFFFFF;
+    text-align: center;
+}
+.navbar-brand {
+    background: #008080;
+    font-size: 25px;
+    font-family: Audiowide;
+}
+.nav ul li a:hover{
+    background: #20B2AA;
+    height: 50px;
+    color: #FFFFFF;
+}
+.dropdown-menu{
+    background: #008080;
+}
+.dropdown-item{
+    color: #FFFFFF;
+    font-size: 25px;
+}
+.xtra{
+    font-size: 60px;
+    padding-left: 550px;
+    font-family: Permanent Marker;
+    color:  #FF4500;
+}
+.box{
+    width: 400px;
+    position: absolute;
+    margin:15px auto;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    border: 1px solid #000000;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+}
+.t{
+    background: #5F9EA0;
+    border-radius: 10px 10px 0px 0px;
+    width: 398px;
+    margin-bottom: 50px;
+}
+.box h1{
+    color: white;
+    text-transform: uppercase;
+}
+.box input[type = "text"], .box input[type = "password"]{
+    display: block;
+    margin: 15px auto;
+    border: 1px solid #808080;
+    padding: 14px 10px;
+    width: 300px;
+    outline: none;
+    color: black;
+    transition: 0.25s;
+    border-radius: 5px 5px 5px 5px;
+}
+.box input[type = "submit"]{
+    background: #20B2AA;
+    color: black;
+    font-size: 15px;
+    border: 2px solid #FFFFFF;
+    width: 150px;
+    padding: 7px 5px;
+    margin: 15px auto;
+    border-radius: 10px 10px 10px 10px;
+}
+.gambar {
+    float : left ;
+    padding-left: 30px;
+}
+.pemisah {
+    clear : both;
+    padding-left: 30px;
+}
+.tengah{padding-right: 20px}
+.join{
+    background: #008000;
+    color: white;
+    border:2px solid #000000;
+    font-size: 20px;
+    padding-left: 30px;
+    padding-right: 30px
+}
+.join:hover{
+    color: #FFFFFF;
+}
+.card{
+
+}
+.box-form{
+    width: 40%;
+    bottom: 20%;
+    min-height:400px;
+    border:1px solid;
+    background: #E6E6FA;
+    margin-left: 30%;
+}
+.title-form{
+    width: 100%;
+    height: 30px;
+    background-color: #1E90FF;
+    text-align: center;
+    color: #FFFFFF;
+}
+.pend{
+    background: #008000;
+    color: white;
+    border: 2px solid #000000;
+}
+.card{
+    border: 3px solid #008000;
+    left: 40%;
+    margin: 20px;
+}
+.bok{
+    width: 420px;
+    position: absolute;
+    margin:10px auto;
+    background: #FF3333;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%,-40%);
+    border: 1px solid #FF3333;
+    color: white;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    font-size: 15px;
+}
+.bok input[type = "text"]{
+    margin: 10px auto;
+    border: 1px solid #FFFFFF;
+    padding: 6px 5px;
+    width: 300px;
+    background: #FFFFFF;
+    color: black;
+    border-radius: 5px 5px 5px 5px;
+}
+.tksc{
+    padding: 10px;
+}
+.row{
+    width: 100%;
+    height: 50px;
+    padding-left: 1363px;
+    font-size: 20px;
+    line-height: 80px;
+    background:  #008080;
+    color: #FFFFFF;
+}
+.fot{
+    width: 100%;
+    height: 50px;
+    padding-left: 1369px;
+    font-size: 20px;
+    line-height: 80px;
+    background:  #008080;
+    color: #FFFFFF;
+}
