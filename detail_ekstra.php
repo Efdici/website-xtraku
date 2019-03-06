@@ -24,7 +24,7 @@ while ( $hasil  = mysqli_fetch_array ($Tampil)) {
 <form method="post">
 <label style="margin-right:20px;">Pembimbing : <?php echo $hasil['nama_pembimbing'];?></label>
 <br><label style="margin-right:20px;">Jml Anggota : <?php echo $hasil['jumlah_anggota'];?></label>
-<input type="text" name="id_ekstra" value="<?php echo $id_ekstra ?>" readonly>
+<input type="hidden" name="id_ekstra" value="<?php echo $id_ekstra ?>" readonly>
 <?php } ?>
 
 <?php include('koneksi.php');
@@ -49,7 +49,7 @@ $sdas=mysqli_fetch_assoc($data);
 //echo '<pre>';
 // print_r($id_siswa);
 //print_r($_SESSION);
-if($sdas['jumlah'] >=3){
+if($sdas['jumlah'] >=2){
 echo "Anda Tidak Bisa Bergabung Karena Melebihi Batas.";
 }else{
 ?>

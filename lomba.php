@@ -12,13 +12,14 @@ $Lihat  = "SELECT * FROM tabel_lomba";
 $Tampil = mysqli_query($conn, $Lihat);
 while ( $hasil  = mysqli_fetch_array ($Tampil)) {
 ?>
-
 <div class="card" style="width: 15rem;">
+	<form method="post">
   <img src="img/tari.png" class="card-img-top" alt="...">
   <div class="card-body">
    <h2><?php echo $hasil['nama_lomba'];?></h2>
    <p align=justify><?php echo $hasil['deskripsi'];?></p>
-   <input type="text" name="id_lomba" value="<?php echo $hasil['id_lomba'];?>" readonly>
+   <input type="hidden" name="id_lomba" value="<?php echo $hasil['id_lomba'];?>" readonly>
+   <input type="hidden" name="id_lombasiswa" value="" readonly>
 
 <?php include('koneksi.php');
 $id_siswa=$_SESSION['id_siswa'];
@@ -30,24 +31,28 @@ if($rows>0)
 	 $array=mysqli_fetch_assoc($result);
 	}
 ?>
-<input type="text" name="id_siswa" value="<?php echo $array['id_siswa'];?>">
-    <br><input onclick="return confirm('tekan OKE untuk bergabung')" class="btn btn-success" type="submit" name="join" value="Join Ekstrakulikuler">
+<input type="hidden" name="id_siswa" value="<?php echo $array['id_siswa'];?>">
+    <br><input onclick="return confirm('tekan OKE untuk bergabung')" class="btn btn-success" type="submit" name="join" value="Join Lomba">
   </div>
+  </form>
 </div>
 <?php } ?>
+
 
 <?php
 include 'koneksi.php';
 if (isset($_POST['join'])){
 $insert = mysqli_query($conn, "INSERT INTO lomba_siswa VALUES
-                      ('".$_POST['id_lomba']."',
+                      ('".$_POST['id_lombasiswa']."',
+                      '".$_POST['id_lomba']."',
                        '".$_POST['id_siswa']."')");
 if ($insert){
    echo 'success.';
 }else{
-   echo 'gagal disimpan',mysqli_error($conn);
+   echo 'gagal disimpan';
   }
 ?>
+
 <?php } ?>
 <?php include ('foter.php') ?>
 <?php } ?>
