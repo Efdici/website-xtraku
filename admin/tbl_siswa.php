@@ -34,8 +34,8 @@ while ( $hasil                  = mysqli_fetch_array ($Tampil)) {
     <td><?=$username?></td>
     <td><?=$password?></td>
     <td>
-        <a onclick="return confirm('tekan OKE untuk menghapus')" href="hapus_siswa.php?id=<?php echo $hasil['id_siswa'];?>" style="padding:1% 1%;background-color: #B22222;color: #fff;border-radius: 2px;text-decoration: none;">Delete</a>
-        <a href="edit_siswa.php?id=<?php echo $hasil['id_siswa'];?>" style="padding:1% 1%;background-color: #1E90FF;color: #fff;border-radius: 2px;text-decoration: none;">Update</a>
+        <a onclick="return confirm('tekan OKE untuk menghapus')" href="hapus_siswa.php?id_siswa=<?php echo $hasil['id_siswa'];?>" style="padding:1% 1%;background-color: #B22222;color: #fff;border-radius: 2px;text-decoration: none;">Delete</a>
+        <a href="edit_siswa.php?id_siswa=<?php echo $hasil['id_siswa'];?>" style="padding:1% 1%;background-color: #1E90FF;color: #fff;border-radius: 2px;text-decoration: none;">Update</a>
     </td>
     <?php
         }

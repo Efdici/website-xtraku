@@ -2,7 +2,8 @@
 
 <?php
 include 'koneksi.php';
-$data_edit = mysqli_query($conn, "SELECT * FROM tabel_siswa WHERE id_siswa = '".$_GET['id']."'");
+$id_siswa = $_GET['id_siswa'];
+$data_edit = mysqli_query($conn, "SELECT * FROM tabel_siswa WHERE id_siswa = '$id_siswa'");
 $result = mysqli_fetch_array($data_edit)
 ?>
 
@@ -45,7 +46,7 @@ $result = mysqli_fetch_array($data_edit)
 if (isset($_POST['edit'])) {
 $update = mysqli_query($conn, "UPDATE tabel_siswa SET  nama_siswa = '".$_POST['nama_siswa']."',id_kelas = '".$_POST['id_kelas']."',
 username = '".$_POST['username']."',password = '".$_POST['password']."'
-WHERE id_siswa = '".$_GET['id']."'");
+WHERE id_siswa = '$id_siswa'");
     if($update){
         echo 'success';
     }else{

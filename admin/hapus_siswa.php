@@ -1,7 +1,9 @@
 <?php
 include "koneksi.php";
-if(isset($_GET['id'])){
-	$delete = mysqli_query($conn, "DELETE FROM tabel_siswa WHERE id_siswa = '".$_GET['id']."'");
-	header('location:tbl_siswa.php');
-}
+$id_siswa = $_GET['id_siswa'];
+
+$sql = ("DELETE  FROM tabel_siswa WHERE id_siswa = '$id_siswa'");
+
+mysqli_query($conn,$sql)or die(mysqli_error($conn));
+header("Location: tbl_siswa.php");
 ?>

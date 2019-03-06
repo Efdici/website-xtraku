@@ -1,7 +1,8 @@
 <?php include ('heder.php');?>
 <?php
 include 'koneksi.php';
-$data_edit = mysqli_query($conn, "SELECT * FROM tabel_lomba WHERE id_lomba = '".$_GET['id']."'");
+$id_lomba = $_GET['id_lomba'];
+$data_edit = mysqli_query($conn, "SELECT * FROM tabel_lomba WHERE id_lomba = '$id_lomba'");
 $result = mysqli_fetch_array($data_edit)
 ?>
 <!DOCTYPE html>
@@ -15,8 +16,6 @@ $result = mysqli_fetch_array($data_edit)
 <form method="POST">
 <table style="margin:2%; margin-top: 1%">
     <div class="container">
-        <br><label>Id Lomba</label>
-        <center><input type="text" name="id_lomba" value="<?php echo $result['id_lomba'];?>" ></center>
         <label>Nama Lomba</label>
         <center><input type="text" name="nama_lomba" value="<?php echo $result['nama_lomba'];?>"></center>
         <label>Deskripsi</label>
@@ -33,7 +32,7 @@ $result = mysqli_fetch_array($data_edit)
 if (isset($_POST['edit'])) {
     $update = mysqli_query($conn, "UPDATE tabel_lomba SET  nama_lomba = '".$_POST['nama_lomba']."', deskripsi = '".$_POST['deskripsi']."',
         gambar = '".$_POST['gambar']."'
-        WHERE id_lomba = '".$_GET['id']."'");
+        WHERE id_lomba = '$id_lomba'");
     if($update){
         echo 'success';
     }else{

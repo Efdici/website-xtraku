@@ -12,7 +12,7 @@
 </head>
 <body>
 <br><font size="4"><center><b>DATA EKSTRAKULIKULER</b></center><font><br>
-<a href=tambah1.php style="padding:0.4% 0.8%; margin-left: 5%; background-color: #009900;color: #fff;border-radius: 2px;text-decoration: none;">Add</a>
+<a href=tambah_ekstrakulikuler.php style="padding:0.4% 0.8%; margin-left: 5%; background-color: #009900;color: #fff;border-radius: 2px;text-decoration: none;">Add</a>
 <table width="90%" style="margin-top: 1%; margin-left: 5%;"  border="1" cellpadding="0" cellspacing="0">
     <tr bgcolor="#FFA600" height="40">
         <th width="12%"><center>Id Ekstrakulikuer</center></th>&nbsp;
@@ -47,8 +47,8 @@ while ( $hasil  = mysqli_fetch_array ($Tampil)) {
         <td><?=$nama_pembimbing?></td>
         <td><?=$jumlah_anggota?></td>
         <td>
-            <a onclick="return confirm('tekan OKE untuk menghapus')" href="hapus_ekstrakulikuler.php?id=<?php echo $hasil['id_ekstra'];?>" style="padding:1% 1%;background-color: #B22222;color: #fff;border-radius: 2px;text-decoration: none;">Delete</a>
-            <a href="edit_ekstrakulikuler.php?id=<?php echo $hasil['id_ekstra'];?>" style="padding:1% 1%;background-color: #1E90FF;color: #fff;border-radius: 2px;text-decoration: none;">Update</a>
+            <a onclick="return confirm('tekan OKE untuk menghapus')" href="hapus_ekstrakulikuler.php?id_ekstra=<?php echo $hasil['id_ekstra'];?>" style="padding:1% 1%;background-color: #B22222;color: #fff;border-radius: 2px;text-decoration: none;">Delete</a>
+            <a href="edit_ekstrakulikuler.php?id_ekstra=<?php echo $hasil['id_ekstra'];?>" style="padding:1% 1%;background-color: #1E90FF;color: #fff;border-radius: 2px;text-decoration: none;">Update</a>
         </td>
         <?php
         }

@@ -25,6 +25,7 @@ while ( $hasil  = mysqli_fetch_array ($Tampil)) {
 <label style="margin-right:20px;">Pembimbing : <?php echo $hasil['nama_pembimbing'];?></label>
 <br><label style="margin-right:20px;">Jml Anggota : <?php echo $hasil['jumlah_anggota'];?></label>
 <input type="hidden" name="id_ekstra" value="<?php echo $id_ekstra ?>" readonly>
+<input type="hidden" name="id_ekstrasiswa" value="">
 <?php } ?>
 
 <?php include('koneksi.php');
@@ -45,11 +46,11 @@ include('koneksi.php');
 $id_siswa=$_SESSION['id_siswa'];
 $sqls = "SELECT count(id_siswa) AS jumlah FROM ekstra_siswa WHERE id_siswa = $id_siswa";
 $data =mysqli_query($conn,$sqls);
-$sdas=mysqli_fetch_assoc($data);
+$q=mysqli_fetch_assoc($data);
 //echo '<pre>';
 // print_r($id_siswa);
 //print_r($_SESSION);
-if($sdas['jumlah'] >=2){
+if($q['jumlah'] >=2){
 echo "Anda Tidak Bisa Bergabung Karena Melebihi Batas.";
 }else{
 ?>
@@ -62,7 +63,8 @@ echo "Anda Tidak Bisa Bergabung Karena Melebihi Batas.";
 include 'koneksi.php';
 if (isset($_POST['join'])){
 $insert = mysqli_query($conn, "INSERT INTO ekstra_siswa VALUES
-                      ('".$_POST['id_ekstra']."',
+                      ('".$_POST['id_ekstrasiswa']."',
+                      '".$_POST['id_ekstra']."',
                        '".$_POST['id_siswa']."')");
 if ($insert){
    echo 'success.';

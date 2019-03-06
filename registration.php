@@ -32,4 +32,4 @@ $insert = mysqli_query($conn, "INSERT INTO tabel_siswa VALUES
                         '".$_POST['password']."')");
 }
 ?>
-<?php include ('footer.php') ?>
+<?php include ('foter.php') ?>

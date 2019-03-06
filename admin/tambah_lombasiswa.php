@@ -4,7 +4,8 @@
 <form action="" method="POST">
 <table style="margin:2%; margin-top: 1%">
     <div class="container">
-        <label>Id Lomba</label></br>
+        <input type="hidden" name="id_lombasiswa">
+        <br><label>Id Lomba</label></br>
         <center><input type="text" name="id_lomba" placeholder="id lomba"></center>
         <label>Id Siswa</label></br>
         <center><input type="text" name="id_siswa" placeholder="id siswa" value="" required></center>
@@ -18,7 +19,7 @@
 include 'koneksi.php';
 if (isset($_POST['simpan'])) {
 $insert = mysqli_query($conn, "INSERT INTO lomba_siswa VALUES
-                        (
+                        ('".$_POST['id_lombasiswa']."',
                         '".$_POST['id_lomba']."',
                         '".$_POST['id_siswa']."')");
 if ($insert) {

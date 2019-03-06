@@ -33,5 +33,5 @@ while ( $hasil	=	mysqli_fetch_array ($Tampil)){
 <input type="text" value="<?php echo $array['username'];?>" readonly></br>
 <a href="edit_profil.php" class="btn btn-success">Edit</a>
 </div>
-<?php include ('footer.php') ?>
+<?php include ('foter.php') ?>
 <?php } ?>

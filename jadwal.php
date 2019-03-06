@@ -62,5 +62,5 @@ if(!isset($_SESSION['nama_siswa'])){
     </tr>
   </table>
 </div>
-<?php include ('foter.php') ?>
+<?php include ('footer.php') ?>
 <?php } ?>

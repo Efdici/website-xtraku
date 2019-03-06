@@ -16,9 +16,8 @@
 <form action="" method="POST">
 <table style="margin:2%; margin-top: 1%">
     <div class="container">
-        <label>Id Kelas</label></br>
-        <center><input type="text" name="id_kelas" placeholder="id kelas"></center>
-        <label>Nama Kelas</label></br>
+        <center><input type="hidden" name="id_kelas" placeholder="id kelas"></center>
+        <br><label>Nama Kelas</label></br>
         <center><input type="text" name="nama_kelas" placeholder="nama kelas" value="" required></center>
         <br><center><button type="submit" name="simpan" value="Simpan" class="btn btn-primary">Submit</button>
         <a href=tbl_kelas.php class="btn btn-success">View Data</a>

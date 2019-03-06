@@ -1,15 +1,18 @@
-<?php include ('header.php') ?>
+<?php include ('header.php');?>
+<div>
 <form class="box" action="" method="post">
 <div class="t">
-<h1>Login</h1>
+	<h1>Login</h1>
 </div>
-<input  type="text" name="username" placeholder="Username" value="" required>
-<input  type="password" name="password" placeholder="Password" value="" required>
-<input type="submit" name="login" value="Login">
-  <p>
-    Belum punya akun?<a href="registration.php">Sign Up</a>
-  </p>
+	<input  type="text" name="username" placeholder="Username" value="" required>
+	<input  type="password" name="password" placeholder="Password" value="" required>
+	<input type="submit" name="login" value="Login">
+  	<p>
+    	Belum punya akun?<a href="registration.php">Sign Up</a>
+  	</p>
 </form>
+</div>
+
 <?php
 include"koneksi.php";
 if(isset($_POST['login'])){
@@ -30,4 +33,4 @@ header("location: index2.php");
   }
 }
 ?>
-<?php include ('footer.php') ?>
+<?php include ('foter.php');?>

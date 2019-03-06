@@ -17,7 +17,7 @@
 <table style="margin:2%; margin-top: 1%">
     <div class="container">
         <center><input type="hidden" name="id_siswa" placeholder="id siswa"></center>
-        <label>Nama Siswa</label></br>
+        <br><label>Nama Siswa</label></br>
         <center><input type="text" name="nama_siswa" placeholder="nama siswa" value="" required></center>
         <label>Id Kelas</label></br>
          <select type="text" name="id_kelas" style="width: 300px;padding: 14px 10px;border-radius: 5px 5px 5px 5px;;border: 1px solid #808080;">

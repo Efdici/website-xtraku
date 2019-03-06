@@ -16,14 +16,13 @@
 <form action="" method="POST">
 <table style="margin:2%; margin-top: 1%">
     <div class="container">
-        <label>Id Ekstrakulikuler</label>
-            <center><input type="text" name="id" placeholder="ID" value="" required></center>
-        <label>Nama Ekstrakulikuler</label>
+            <center><input type="hidden" name="id" value="" required=""></center>
+        <br><label>Nama Ekstrakulikuler</label>
             <center><input type="text" name="nama" placeholder="Nama Ekstrakulikuler" value="" required></center>
         <label>Deskripsi</label>
             <center><input type="text" name="deskripsi" placeholder="Deskripsi" value="" required></center>
         <label>Gambar</label>
-            <center><input type="file" name="image" placeholder="Gambar" value="" required></center>
+            <center><input type="file" name="image" placeholder="Gambar" value=""></center>
         <label>Kategori</label>
             <center><input type="text" name="kategori" placeholder="Kategori" value="" required></center>
         <label>Nama Pembimbing</label>
@@ -31,7 +30,7 @@
         <label>Jumlah Anggota</label>
             <center><input type="text" name="anggota" placeholder="Jumlah Anggota" value="" required></center>
         <br><center><button type="submit" name="simpan" value="Simpan" class="btn btn-primary">Submit</button>
-        <a href=index1.php class="btn btn-success">View Data</a>
+        <a href=tbl_ekstrakulikuler.php class="btn btn-success">View Data</a>
     </div>
 </table>
 </form>

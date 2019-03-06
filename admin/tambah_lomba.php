@@ -5,7 +5,7 @@
 <table style="margin:2%; margin-top: 1%">
     <div class="container">
         <center><input type="hidden" name="id_lomba"></center>
-        <label>Nama Lomba</label></br>
+        <br><label>Nama Lomba</label></br>
         <center><input type="text" name="nama_lomba" placeholder="nama lomba" value="" required></center>
          <label>Deskripsi</label></br>
         <center><input type="text" name="deskripsi" placeholder="deskripsi" value="" required></center>

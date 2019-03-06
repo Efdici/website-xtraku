@@ -25,8 +25,8 @@
             <td><?=$id_kelas?></td>
             <td><?=$nama_kelas?></td>
             <td>
-            <a onclick="return confirm('tekan OKE untuk menghapus')" href="hapus_kelas.php?id=<?php echo $hasil['id_kelas'];?>" style="padding:1% 1%;background-color: #B22222;color: #fff;border-radius: 2px;text-decoration: none;">Delete</a>
-            <a href="edit_kelas.php?id=<?php echo $hasil['id_kelas'];?>" style="padding:1% 1%;background-color: #1E90FF;color: #fff;border-radius: 2px;text-decoration: none;">Update</a>
+            <a onclick="return confirm('tekan OKE untuk menghapus')" href="hapus_kelas.php?id_kelas=<?php echo $hasil['id_kelas'];?>" style="padding:1% 1%;background-color: #B22222;color: #fff;border-radius: 2px;text-decoration: none;">Delete</a>
+            <a href="edit_kelas.php?id_kelas=<?php echo $hasil['id_kelas'];?>" style="padding:1% 1%;background-color: #1E90FF;color: #fff;border-radius: 2px;text-decoration: none;">Update</a>
             </td>
     <?php
             }

@@ -1,7 +1,8 @@
 <?php include ('heder.php');?>
 <?php
 include 'koneksi.php';
-$data_edit = mysqli_query($conn, "SELECT * FROM tabel_ekstrakulikuler WHERE id_ekstra = '".$_GET['id']."'");
+$id_ekstra = $_GET['id_ekstra'];
+$data_edit = mysqli_query($conn, "SELECT * FROM tabel_ekstrakulikuler WHERE id_ekstra = '$id_ekstra'");
 $result = mysqli_fetch_array($data_edit)
 ?>
 <!DOCTYPE html>
@@ -28,7 +29,7 @@ $result = mysqli_fetch_array($data_edit)
         <label>Anggota</label>
         <center><input type="text" name="anggota" placeholder="anggota" value="<?php echo $result['jumlah_anggota'];?>"></center>
         <br><center><button type="submit" name="edit" value="Simpan" class="btn btn-primary">Submit</button>
-        <a href=index1.php class="btn btn-success">View Data</a>
+        <a href=tbl_ekstrakulikuler.php class="btn btn-success">View Data</a>
     </div>
 </table>
 </form>
@@ -36,7 +37,7 @@ $result = mysqli_fetch_array($data_edit)
 <?php
 if (isset($_POST['edit'])) {
     $update = mysqli_query($conn, "UPDATE tabel_ekstrakulikuler SET  nama_ekstra = '".$_POST['nama']."',deskripsi = '".$_POST['deskripsi']."',gambar = '".$_POST['gambar']."',kategori = '".$_POST['kategori']."',nama_pembimbing = '".$_POST['pembimbing']."',jumlah_anggota = '".$_POST['anggota']."'
-        WHERE id_ekstra = '".$_GET['id']."'");
+        WHERE id_ekstra = '$id_ekstra'");
     if($update){
         echo 'success';
     }else{

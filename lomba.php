@@ -12,14 +12,14 @@ $Lihat  = "SELECT * FROM tabel_lomba";
 $Tampil = mysqli_query($conn, $Lihat);
 while ( $hasil  = mysqli_fetch_array ($Tampil)) {
 ?>
-<div class="card" style="width: 15rem;">
-	<form method="post">
-  <img src="img/tari.png" class="card-img-top" alt="...">
-  <div class="card-body">
-   <h2><?php echo $hasil['nama_lomba'];?></h2>
-   <p align=justify><?php echo $hasil['deskripsi'];?></p>
+    <div class="card" style="width: 15rem;">
+	 <form method="post">
+    <img src="img/tari.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h2><?php echo $hasil['nama_lomba'];?></h2>
+   <h5><?php echo $hasil['deskripsi'];?></h5>
    <input type="hidden" name="id_lomba" value="<?php echo $hasil['id_lomba'];?>" readonly>
-   <input type="hidden" name="id_lombasiswa" value="" readonly>
+  <input type="hidden" name="id_lombasiswa" value="" readonly>
 
 <?php include('koneksi.php');
 $id_siswa=$_SESSION['id_siswa'];
@@ -54,5 +54,5 @@ if ($insert){
 ?>
 
 <?php } ?>
-<?php include ('foter.php') ?>
+<?php include ('footer.php') ?>
 <?php } ?>
